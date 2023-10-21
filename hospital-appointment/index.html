@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hospital Appointment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light bg-primary bg-gradient">
+        <div class="container-fluid mx-3 my-1">
+          <a class="navbar-brand text-white" href="#"
+            ><i class="fa-solid fa-bars"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item me-4">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="#"
+                  ><i class="fa-solid fa-calendar-check fa-sm me-2"></i>
+                  <span>Make an Appointment</span></a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link text-white" href="#"
+                  ><i class="fa-solid fa-pencil fa-sm me-2"></i>
+                  <span>Write a Prescription</span></a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link text-white" href="#">
+                  <i class="fa-solid fa-align-center fa-sm me-2"></i>
+                  <span>Generate Report</span></a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link text-white" href="#"
+                  ><i class="fa-solid fa-pencil fa-sm me-2"></i>
+                  <span>Write a Prescription</span></a
+                >
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link text-white" href="#"
+                  ><i class="fa-solid fa-bell fa-sm"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a href="#"><img src="assets/images/men.jpg" alt="img" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- /Header/ -->
+
+    <div id="main-content">
+      <div class="container-fluid ms-3 pt-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#" class="text-decoration-none text-dark"
+                ><i class="fa-solid fa-house me-2"></i>Home</a
+              >
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#" class="text-decoration-none text-dark">Patient</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Patient List
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- /Breadcrumb/ -->
+
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <div class="border mb-5">
+            <div
+              id="patient-list"
+              class="border-bottom d-flex justify-content-between px-2 py-4"
+            >
+              <div class="fw-bold text-uppercase">Patient List</div>
+              <div class="text-primary">
+                <a href="#" class="text-decoration-none">Add Patient</a>
+              </div>
+            </div>
+
+            <!-- /patient-lists/ -->
+
+            <nav
+              id="patient-search"
+              class="navbar navbar-expand-sm navbar-light py-4"
+            >
+              <div class="container-fluid">
+                <div class="patient-list">
+                  <label class="me-2">Show</label>
+                  <div class="btn-group">
+                    <span>10</span>
+                    <div class="dropup">
+                      <i class="fa-solid fa-caret-up"></i>
+                    </div>
+                    <div><i class="fa-solid fa-caret-down"></i></div>
+                  </div>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="Search Data..."
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
+            <!-- /Patient-Search/ -->
+
+            <div class="container-fluid">
+              <table class="table table-striped border">
+                <thead>
+                  <tr>
+                    <th class="bg-warning bg-gradient text-white" scope="col">
+                      Name
+                    </th>
+                    <th class="bg-warning bg-gradient text-white" scope="col">
+                      Address
+                    </th>
+                    <th class="bg-warning bg-gradient text-white" scope="col">
+                      Disease
+                    </th>
+                    <th class="bg-warning bg-gradient text-white" scope="col">
+                      Age
+                    </th>
+                    <th class="bg-warning bg-gradient text-white" scope="col">
+                      Phone
+                    </th>
+                    <th class="bg-warning bg-gradient text-white" scope="col">
+                      Email
+                    </th>
+                    <th class="bg-warning bg-gradient text-white" scope="col">
+                      Action
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="#"
+                        ><img
+                          class="rounded-circle"
+                          src="assets/images/men1.jpg"
+                          width="25"
+                          height="25"
+                          alt="img" /></a
+                      >Pramod
+                    </td>
+                    <td>Narasaraopet</td>
+                    <td>Fever</td>
+                    <td>22</td>
+                    <td>9372823423</td>
+                    <td>
+                      <a href="#" class="text-decoration-none text-dark"
+                        >pram@gmail.com</a
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-decoration-none"
+                        ><i
+                          class="fa-solid fa-pencil fa-sm me-3 text-success"
+                        ></i
+                        ><i class="fa-sm fa-solid fa-trash text-danger"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#"
+                        ><img
+                          class="rounded-circle"
+                          src="assets/images/men2.jpg"
+                          width="25"
+                          height="25"
+                          alt="img" /></a
+                      >Mani
+                    </td>
+                    <td>Vinukonda</td>
+                    <td>Fever</td>
+                    <td>23</td>
+                    <td>7738534251</td>
+                    <td>
+                      <a href="#" class="text-decoration-none text-dark"
+                        >mani@gmail.com</a
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-decoration-none"
+                        ><i
+                          class="fa-solid fa-pencil fa-sm me-3 text-success"
+                        ></i
+                        ><i class="fa-sm fa-solid fa-trash text-danger"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#"
+                        ><img
+                          class="rounded-circle"
+                          src="assets/images/men3.jpg"
+                          width="25"
+                          height="25"
+                          alt="img" /></a
+                      >Rohit
+                    </td>
+                    <td>Podili</td>
+                    <td>Fever</td>
+                    <td>21</td>
+                    <td>8272824443</td>
+                    <td>
+                      r<a href="#" class="text-decoration-none text-dark"
+                        >ohit@gmail.com</a
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-decoration-none"
+                        ><i
+                          class="fa-solid fa-pencil fa-sm me-3 text-success"
+                        ></i
+                        ><i class="fa-sm fa-solid fa-trash text-danger"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#"
+                        ><img
+                          class="rounded-circle"
+                          src="assets/images/men4.jpg"
+                          width="25"
+                          height="25"
+                          alt="img" /></a
+                      >Vamsi
+                    </td>
+                    <td>Pamarru</td>
+                    <td>Fever</td>
+                    <td>24</td>
+                    <td>9351823423</td>
+                    <td>
+                      v<a href="#" class="text-decoration-none text-dark"
+                        >amsi@gmail.com</a
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-decoration-none"
+                        ><i
+                          class="fa-solid fa-pencil fa-sm me-3 text-success"
+                        ></i
+                        ><i class="fa-sm fa-solid fa-trash text-danger"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#"
+                        ><img
+                          class="rounded-circle"
+                          src="assets/images/men5.jpg"
+                          width="25"
+                          height="25"
+                          alt="img" /></a
+                      >Chandu
+                    </td>
+                    <td>Macharla</td>
+                    <td>Fever</td>
+                    <td>22</td>
+                    <td>9014823629</td>
+                    <td>
+                      ch<a href="#" class="text-decoration-none text-dark"
+                        >andu@gmail.com</a
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-decoration-none"
+                        ><i
+                          class="fa-solid fa-pencil fa-sm me-3 text-success"
+                        ></i
+                        ><i class="fa-sm fa-solid fa-trash text-danger"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#"
+                        ><img
+                          class="rounded-circle"
+                          src="assets/images/men6.jpg"
+                          width="25"
+                          height="25"
+                          alt="img" /></a
+                      >Chinna
+                    </td>
+                    <td>Kakinada</td>
+                    <td>Fever</td>
+                    <td>25</td>
+                    <td>62718234231</td>
+                    <td>
+                      ch<a href="#" class="text-decoration-none text-dark"
+                        >inna@gmail.com</a
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-decoration-none"
+                        ><i
+                          class="fa-solid fa-pencil fa-sm me-3 text-success"
+                        ></i
+                        ><i class="fa-sm fa-solid fa-trash text-danger"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#"
+                        ><img
+                          class="rounded-circle"
+                          src="assets/images/men7.jpg"
+                          width="25"
+                          height="25"
+                          alt="img" /></a
+                      >Satish
+                    </td>
+                    <td>Hyderabad</td>
+                    <td>Fever</td>
+                    <td>22</td>
+                    <td>8272827426</td>
+                    <td>
+                      sa<a href="#" class="text-decoration-none text-dark"
+                        >tish@gmail.com</a
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-decoration-none"
+                        ><i
+                          class="fa-solid fa-pencil fa-sm me-3 text-success"
+                        ></i
+                        ><i class="fa-sm fa-solid fa-trash text-danger"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#"
+                        ><img
+                          class="rounded-circle"
+                          src="assets/images/men8.jpg"
+                          width="25"
+                          height="25"
+                          alt="img" /></a
+                      >Pandu
+                    </td>
+                    <td>Chennai</td>
+                    <td>Fever</td>
+                    <td>24</td>
+                    <td>7973415423</td>
+                    <td>
+                      p<a href="#" class="text-decoration-none text-dark"
+                        >andu@gmail.com</a
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-decoration-none"
+                        ><i
+                          class="fa-solid fa-pencil fa-sm me-3 text-success"
+                        ></i
+                        ><i class="fa-sm fa-solid fa-trash text-danger"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#"
+                        ><img
+                          class="rounded-circle"
+                          src="assets/images/men9.jpg"
+                          width="25"
+                          height="25"
+                          alt="img" /></a
+                      >Ganesh
+                    </td>
+                    <td>Texas</td>
+                    <td>Fever</td>
+                    <td>23</td>
+                    <td>6352826423</td>
+                    <td>
+                      ga<a href="#" class="text-decoration-none text-dark"
+                        >nesh@gmail.com</a
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-decoration-none"
+                        ><i
+                          class="fa-solid fa-pencil fa-sm me-3 text-success"
+                        ></i
+                        ><i class="fa-sm fa-solid fa-trash text-danger"></i
+                      ></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#"
+                        ><img
+                          class="rounded-circle"
+                          src="assets/images/men10.jpg"
+                          width="25"
+                          height="25"
+                          alt="img" /></a
+                      >Gopi
+                    </td>
+                    <td>Bangalore</td>
+                    <td>Fever</td>
+                    <td>23</td>
+                    <td>9391282431</td>
+                    <td>
+                      <a href="#" class="text-decoration-none text-dark"
+                        >gopi@gmail.com</a
+                      >
+                    </td>
+                    <td>
+                      <a href="#" class="text-decoration-none"
+                        ><i
+                          class="fa-solid fa-pencil fa-sm me-3 text-success"
+                        ></i
+                        ><i class="fa-sm fa-solid fa-trash text-danger"></i
+                      ></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- /Table-data/ -->
+
+            <nav
+              id="patient-entries"
+              class="navbar navbar-expand-sm navbar-light mb-3"
+            >
+              <div class="container-fluid">
+                <div class="text-secondary">showing 1 to 10 of 36 entries</div>
+                <div>
+                  <ul class="nav">
+                    <li class="nav-item border me-2">
+                      <a class="nav-link" href="#">Previous</a>
+                    </li>
+                    <li class="nav-item border me-2">
+                      <a class="nav-link" href="#">1</a>
+                    </li>
+                    <li class="nav-item border me-2">
+                      <a
+                        class="nav-link active text-white text-bg-primary"
+                        aria-current="page"
+                        href="#"
+                        >2</a
+                      >
+                    </li>
+                    <li class="nav-item border me-2">
+                      <a class="nav-link" href="#">3</a>
+                    </li>
+                    <li class="nav-item border me-2">
+                      <a class="nav-link" href="#">4</a>
+                    </li>
+                    <li class="nav-item border">
+                      <a class="nav-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+
+            <!-- /Patient-Entries/ -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

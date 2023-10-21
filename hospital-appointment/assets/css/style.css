@@ -1,0 +1,37 @@
+body {
+    background-color: #f1f6fc;
+    overflow-x: hidden;
+}
+
+header img {
+    border-radius: 50%;
+    height: 30px;
+    margin-top: 5px;
+    width: 30px;
+}
+
+#main-content .container-fluid .border {
+    background-color: white;
+}
+
+.patient-list .btn-group {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.patient-list span {
+    margin-right: 20px;
+}
+
+.patient-list .btn-group .dropup {
+    position: relative;
+}
+
+.patient-list .btn-group .dropup i {
+    bottom: 10px;
+    position: absolute;
+}
+
+tbody td img {
+    margin-right: 7px;
+}
